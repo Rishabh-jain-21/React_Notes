@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>React</h1>
+        <hr>
+        <h2>Components:</h2>
+        <p>React is a single page application, distributed into small components, We use </p>
+        <hr>
+        <h2>
+            Props:
+        </h2>
+        <p>
+        <div class="imp_txt">Defination: </div>
+        <span>In React, props is short for "properties" and is a way to pass data from a parent component to a child
+            component. The parent component can pass data to the child component by adding attributes to the child
+            component's JSX element, and the child component can access that data through the props object. The props
+            object is read-only, meaning the child component cannot modify the data passed down to it via props.</span>
+        </p>
+        <p>
+            We have a navbar with name as "Texter app" and we want to change the name of the navbar dynammically, we do
+            not want it to be hardcoded, so where we are calling that navbar components for eg. in the APP.js file we
+            will
+            simply pass the props in it and will access the props in the navbar components.
+        </p>
+
+        <div>
+            <div class="min_head">
+                How to pass Props:
+            </div>
+            <p>
+                Simply where we are Rendering the component we can pass props from parent -> children like this.
+            </p>
+            <div class="img">
+                <img src="navbar1.png" alt="">
+            </div>
+        </div>
+
+
+        <div>
+            <div class="min_head">
+                How to use props:
+            </div>
+            <p>
+                here in this pic. on the first line we are using props using Object destructuring (Note:
+                the name using in the destructuring should be same as the props passed).
+                <br> In the third line we are using destructured object
+            </p>
+            <div class="img">
+                <img src="navbar2.png" alt="">
+            </div>
+        </div>
+        <div>
+
+            <div class="min_head">
+                Result :
+            </div>
+            <div class="img">
+                <img src="navbar3.png" alt="">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2>PropTypes: </h2>
+            <p>Proptypes are basically used to set the type of the props, it can be a string type, integer type or
+                anything else, Once the data type of the prop is set and if you pass the prop with other data type it
+                will give warning in the console, will be easy to track the error
+            <div class="img"><img src="navbar4.png" alt=""></div>
+            <br>
+            <p class="min_head">isRequired</p>
+            <p>
+                .isRequired is used with Proptype if the prop is not passed but it is something without which out
+                compnent
+                will not be completed in that case we will use isRequired throw error in console.
+            </p>
+            <div class="img"><img src="navbar5.png" alt=""></div>
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h2>Default PropType</h2>
+            <p>it is used when you are not sure that everytime the prop will be passed. In that case we will use the
+                default propType</p>
+            <div class="img"><img src="navbar6.png" alt=""></div>
+            <p class="min_head">Result</p>
+            <div class="img"><img src="navbar7.png" alt=""></div>
+        </div>
+        <hr>
+        <div>
+            <h2>State</h2>
+            <p>
+            <div class="imp_txt">Short Note: </div>
+            <span>useState is a built-in hook in React that allows functional components to have state and re-render
+                when that state changes. It takes an initial value as an argument and returns an array with two
+                elements: the current state value and a function to update that value.</span>
+            </p>
+            <p>
+            <div class="imp_txt">Example: </div>
+            <span>When you use useState in a functional component in React, you need to pass an initial value to it as
+                an argument. For example, let's say you want to track a count in your component, and you want to
+                initialize it to 0</span>
+            </p>
+            <div class="img"><img src="state1.png" alt=""></div>
+            <p>
+                In the code above, we pass 0 as the initial value to useState. The useState function returns an array
+                with two elements: <br>
+            <ol>
+                <li>
+                    The first element is the current state value, which we've assigned to the count variable using array
+                    destructuring. Initially, count is set to 0.</li>
+                <li>The second element is a function that allows us to update the state value. We've assigned this
+                    function
+                    to setCount. We can call setCount with a new value to update the count state. In the example above,
+                    we
+                    use setCount(count + 1) to increment the count by 1 whenever the "Increment" button is clicked.</li>
+                <p>So, in summary, useState takes an initial value as an argument and returns an array with two
+                    elements:
+                    the current state value and a function to update that value.</p>
+            </ol>
+            </p>
+        </div>
+        <hr>
+        <div>
+            <h2>Event Handlers</h2>
+            <p>
+                React lets you add event handlers to your JSX. Event handlers are your own functions that will be
+                triggered in response to interactions like clicking, hovering, focusing form inputs, and so on.
+            </p>
+            <div class=" img"><img src="eh1.png" alt="">
+            </div>
+            <p>In the above image you can see i have called an event like onClick so it will be triggered when ever
+                someone will click the specific button, but here as you can see in the console the output is there
+                without even clicking on the button</p>
+            <br>
+
+            <div class="imp_txt">(*)</div>
+            <span> Keep it in mind whenever you are calling your
+                funcition it should'nt be
+                function call (with parenthesis), Always it will be a function passed in the event Handeler. In image it
+                should be </span>
+            <div class="imp_txt">handleClearText
+            </div><span>without the parenthesis.</span>
+
+
+            <p style="padding-top: 10px" class="imp_txt">Note: <span style="font-weight: 400;"> If you call the function
+                    which contains useState
+                    hook it will
+                    stuck into
+                    an infinite loop and will
+                    throw the error, can see below in the img..</span></p>
+            <div class="img"><img src="eh2.png" alt=""></div>
+        </div>
+        <hr>
+
+    </div>
+</body>
+
+</html>
